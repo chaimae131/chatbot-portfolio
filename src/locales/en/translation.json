@@ -1,0 +1,234 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "home": {
+    "name": "Chaima Bissi",
+    "title": "Cybersecurity Student",
+    "description": "Engineering Student in Cyber Defense & Embedded Telecommunications Systems",
+    "downloadCV": "Download CV",
+    "chatbot": "Ask me a question",
+    "stats": {
+      "years": "Years of Study",
+      "projects": "Projects",
+      "tech": "Technologies"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "summary": "I have built a strong foundation through academic and personal projects...",
+    "timeline": [
+      {
+        "title": "Engineering Cycle – Cybersecurity (2nd Year)",
+        "date": "2023 - Present",
+        "place": "ENSA, Marrakech"
+      },
+      {
+        "title": "Preparatory Cycle for Engineering Studies",
+        "date": "2021 - 2023",
+        "place": "ENSA, Marrakech"
+      },
+      {
+        "title": "High School Diploma",
+        "date": "2021",
+        "place": "SIDI MED BEN ABDELLAH High School"
+      }
+    ],
+    "certificationsTitle": "Certifications",
+    "certificates": {
+        "cc": "ISC2 Certified in Cybersecurity",
+        "cissp": "CISSP Certified Information Systems Security Professional",
+        "iso": "ISO/IEC 27001:2022 INFORMATION SECURITY ASSOCIATE™",
+        "linux": "Administer a Linux system",
+        "windows": "Take control of Windows Server"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "filters": {
+      "all": "All",
+      "academicProjects": "Academic Projects",
+      "personalProjects": "Personal Projects",
+      "network": "Network",
+      "cloud": "Cloud",
+      "ai": "AI",
+      "web": "Web",
+      "virtualization": "Virtualization"
+    },
+    "noProjects": "No project in this category.",
+    "viewProject": "View project",
+    "backToProjects": "Back to Projects",
+    "viewLive": "View Live Project",
+    "viewCode": "View Code",
+    "categories": {
+      "personalProjects": "Personal Projects",
+      "network": "Network",
+      "academicProjects": "Academic Projects",
+      "cloud": "Cloud",
+      "ai": "AI",
+      "web": "Web",
+      "virtualization": "Virtualization"
+    },
+    "secureHomeLab": {
+      "title": "Secure Home Lab",
+      "description": "Built a secure environment with pfSense, Active Directory, pentesting tools, monitoring, and digital forensics.",
+      "sections": {
+        "0": "Network configuration with pfSense to create isolated VLANs and secure traffic.",
+        "1": "Deployment of Active Directory and integration of clients and servers.",
+        "2": "Pentesting Active Directory with Kali Linux.",
+        "3": "Deployment of Splunk to monitor logs and AD activities.",
+        "4": "Using Tsurugi Linux for incident response and digital forensics (DFIR)."
+      }
+    },
+    "cloudSIEM": {
+      "title": "Cloud-native SIEM (AWS)",
+      "description": "Designed a full SOC stack (TheHive, Cortex, Elasticsearch, MISP) with Docker; integrated threat intelligence and automated incident enrichment.",
+      "sections": {
+        "0": "GuardDuty enabled to monitor EC2 instances for suspicious access attempts...",
+        "1": "Lambda function restructures GuardDuty findings and sends them to S3 and TheHive.",
+        "2": "EventBridge rule triggers Lambda on GuardDuty findings.",
+        "3": "SQS configured for async communication from Lambda to the main instance.",
+        "4": "Containers deployed via Docker Compose (TheHive on port 9000).",
+        "5": "Cortex accessible on port 9001 for automated analysis.",
+        "6": "MISP for storing and sharing threat indicators.",
+        "7": "Cortex + MISP fully integrated with TheHive for enrichment.",
+        "8": "TheHive manages incidents as structured cases.",
+        "9": "VirusTotal analyzer in Cortex enriches observables.",
+        "10": "Cloudflare responder in Cortex automates IP blocking.",
+        "11": "MISP correlates observables to detect known threats.",
+        "12": "Kibana visualizes dashboards of TheHive cases."
+      }
+    },
+    "aiRecruitmentApp": {
+      "title": "Intelligent Recruitment App",
+      "description": "Web app using AI to analyze CVs, score candidates, and simulate asynchronous job interviews.",
+      "sections": {
+        "0": "Two user roles: Candidate and Company with dedicated features.",
+        "1": "Company dashboard with job offer and interview management.",
+        "2": "List of job offers posted by the company.",
+        "3": "Candidate dashboard with application tracking.",
+        "4": "Apply to offers and track applications in real time.",
+        "5": "Cross-encoder model compares CV and offer for match scoring.",
+        "6": "Status updated to 'Interview' if score is high.",
+        "7": "Asynchronous video interview with recorded answers.",
+        "8": "DeepFace facial analysis + Whisper transcription.",
+        "9": "Emotional reports generated with Matplotlib.",
+        "10": "Dashboard showing emotional trends."
+      }
+    },
+    "esxi-vcenter": {
+      "title": "Setup of a Virtualized Environment",
+      "description": "Building a complete virtualized infrastructure using VMware ESXi and vCenter Server, including the deployment and configuration of essential network services.",
+      "sections": {
+        "0": "Installation and initial configuration of vCenter Server to centralize and manage ESXi hosts and virtual machines efficiently",
+        "1": "Creation and setup of virtual machines with proper network configurations to ensure communication between VMs and external networks",
+        "2": "Deployment of an FTP server within a VM, allowing file sharing and testing secure file transfer between different virtual machines",
+        "3": "Setup of the Apache2 web server on a Linux virtual machine, hosting web content and enabling basic web services in the virtualized environment",
+        "4": "Configuration of SSH service on Linux VMs, securing remote access by disabling password authentication and enforcing key-based authentication for enhanced security"
+      }
+    },
+    "cbac-django": {
+      "title": "CBAC App",
+      "description": "Development of a web app implementing content-based access control combined with AI to analyze post content and apply age restrictions.",
+      "sections": {
+        "0": "The homepage presents the key features of the platform, including AI-powered content filtering and secure posting options",
+        "1":  "An interface where users can create and share posts, whether text, images, or videos, with automatic content analysis applied before publication",
+        "2": "The content view page for adult users, allowing unrestricted access to all published posts, including those with sensitive material",
+        "3": "The content view page for minor users, where only safe, public posts are displayed, and sensitive or inappropriate content is automatically restricted"
+      }
+    },
+    "haac": {
+      "title": "Hardening as Code",
+      "description": "Static and dynamic hardening for Linux systems with scripts and Ansible automation",
+      "sections": {
+        "0": "Project architecture where the main script orchestrates static and dynamic hardening tasks",
+        "1": "Static hardening script interacting with users for confirmation before applying changes",
+        "2": "Dynamic hardening to automatically adapt based on system status",
+        "3": "Auditing system security by testing and validating applied hardening measures",
+        "4": "Monitoring and checking the system's current security status",
+        "5": "Automating all hardening processes using Ansible playbooks"
+      }
+    },
+    "web-servers-security": {
+      "title": "Web Servers Security",
+      "description": "Built a secure network in GNS3 to protect a web server using firewalls, proxies, and security appliances",
+      "sections": {
+        "0": "Set up FortiGate firewall policies and implemented a DMZ to isolate the web servers from internal networks",
+        "1": "Configured a reverse proxy to manage incoming traffic and hide the real IP adress of the backend server",
+        "2": "Deployed FortiWeb for advanced web application protection and threat detection",
+        "3": "Conducted tests to verify the effectiveness of all security measures in place"
+      }
+    },
+    "glucocare": {
+      "title": "GlucoCare web App",
+      "description":  "Developed a secure web app where patients and doctors can track diabetes data, communicate, and manage treatment effectively",
+      "sections": {
+        "0": "Patient dashboard showing features like profile, notifications, notes, and health data tracking",
+        "1": "Interface for patients to create and manage personal health notes",
+        "2": "Graph displaying blood glucose levels before and after meals",
+        "3": "Personalized chatbot to assist patients with diabetes-related questions",
+        "4": "Doctor's dashboard to manage and monitor patient information",
+        "5": "Doctor's view of patients' profiles, notes history, and blood glucose graphs",
+        "6": "Doctor setting personalized reminders for patients",
+        "7": "Chat system for scheduling consultations between patients and doctors"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "filters": {
+      "all": "All",
+      "languages": "Languages & Scripting",
+      "platforms": "Platforms & OS",
+      "cloud": "Cloud & DevOps",
+      "security": "Security & Networking",
+      "crypto": "Cryptography",
+      "soft": "Soft Skills"
+    },
+    "categories": {
+      "languages": "Languages & Scripting",
+      "platforms": "Platforms & OS",
+      "cloud": "Cloud & DevOps",
+      "security": "Security & Networking",
+      "crypto": "Cryptography",
+      "soft": "Soft Skills"
+    },
+    "softSkills": {
+      "teamwork": "Teamwork",
+      "timeManagement": "Time Management",
+      "problemSolving": "Problem Solving",
+      "adaptability": "Adaptability",
+      "communication": "Communication",
+      "rigour": "Rigour",
+      "attention": "Attention to Detail"
+    }
+  },
+  "contact": {
+      "title": "Contact Me",
+      "subtitle": "Please feel free to contact me to discuss projects or opportunities.",
+      "formTitle": "Send me a message",
+      "formDescription": "Fill out the form below and I will get back to you as soon as possible.",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Subject of your message",
+      "message": "Message",
+      "messagePlaceholder": "Your message",
+      "sendButton": "Send the message",
+      "contactInfo": "Contact information",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "locationLabel": "Location",
+      "locationValue": "Marrakech, Morocco",
+      "socialTitle": "Social Media",
+      "footerText": "© 2025 Chaima BISSI. All rights reserved."
+  }
+  
+}
+

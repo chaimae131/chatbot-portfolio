@@ -1,0 +1,197 @@
+/* Container général */
+.skills-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem; /* espace sur les côtés */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #000080;
+  margin-bottom: 25px;
+}
+
+/* Filtres des catégories */
+.skills-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: flex-start; /* Aligné à gauche, pas centré */
+}
+
+.skills-filters button {
+  padding: 0.5rem 1.3rem;
+  border: 2px solid #53abff;
+  background-color: transparent;
+  color: #53abff;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.skills-filters button:hover {
+  background-color: #53abff;
+  color: white;
+  box-shadow: 0 5px 15px rgba(83, 171, 255, 0.4);
+}
+
+.skills-filters button.active {
+  background-color: #05397f; /* bleu navy foncé */
+  color: white;
+  border-color: #05397f;
+  box-shadow: 0 5px 20px rgba(5, 57, 127, 0.6);
+}
+
+/* Section Skills (chaque catégorie) */
+.skills-section {
+  margin-bottom: 4rem;
+}
+
+/* Titre de section */
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  border-left: 6px solid #53abff;
+  padding-left: 0.6rem;
+  padding-bottom: 0.7rem;
+  color: #05397f;
+}
+
+/* Disclaimer (petit texte) */
+.skill-disclaimer {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Grille des catégories de skills */
+.technical-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem 2rem;
+}
+
+/* Card de catégorie */
+.skill-category-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+  min-height: 280px;
+}
+
+.skill-category-card:hover {
+  box-shadow: 0 8px 25px rgba(83, 171, 255, 0.3);
+}
+
+/* Header de catégorie */
+.skill-category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: #05397f;
+}
+
+.skill-category-icon {
+  font-size: 2.4rem;
+}
+
+/* Liste des skills */
+.skills-list {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  overflow-y: auto; /* si trop grand */
+  padding-right: 5px; /* espace scroll */
+}
+
+/* Item skill */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f5f9ff;
+  border-radius: 8px;
+  padding: 0.45rem 0.8rem;
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: #dbe9ff;
+}
+
+/* Icon skill */
+.skill-icon {
+  font-size: 1.7rem;
+  color: #53abff;
+  flex-shrink: 0;
+}
+
+/* Info skill */
+.skill-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nom skill */
+.skill-info span {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Barre de niveau */
+.skill-level-bar {
+  width: 100%;
+  height: 6px;
+  background: #cfd9ef;
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+/* Barre de progression remplie */
+.skill-level-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #53abff 0%, #05397f 100%);
+  border-radius: 10px 0 0 10px;
+}
+
+/* Scroll barre si nécessaire */
+.skills-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.skills-list::-webkit-scrollbar-thumb {
+  background-color: #53abff;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 0 1rem;
+  }
+  .technical-skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-filters {
+    justify-content: center;
+  }
+}
