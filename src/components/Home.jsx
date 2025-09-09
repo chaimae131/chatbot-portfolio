@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, Eye, Github, Linkedin, Mail } from "lucide-react"
+import { Download, MessageCircle, Github, Linkedin, Mail } from "lucide-react"
 import "./Home.css"
 import { useTranslation } from "react-i18next"
 
@@ -27,7 +27,7 @@ export default function Home({ onOpenChatbot }) {
                 <span>{t("home.downloadCV")}</span>
               </a>
               <button onClick={onOpenChatbot} className="btn btn-secondary">
-                <Eye size={20} />
+                <MessageCircle size={20} />
                 <span>{t("home.chatbot")}</span>
               </button>
             </div>
