@@ -5,11 +5,11 @@ import ChatbotIcon from "./components/ChatbotIcon"
 import ChatForm from "./components/ChatForm"
 import ChatMessage from "./components/ChatMessage"
 import qa from "./data"
-import { GoogleGenerativeAI } from "@google/generative-ai"
 import { franc } from "franc"
 import "./Chatbot.css"
+import { getChatResponse, getEmbedding, getEmbeddingsBatch } from "./api/openai";
 
-const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY)
+
 
 // Fonction de normalisation de texte
 const normalizeText = (text) => {
@@ -34,30 +34,33 @@ const Chatbot = ({ isOpen, setIsOpen }) => {
   }
 
   useEffect(() => {
-    const generateEmbeddings = async () => {
-      const model = genAI.getGenerativeModel({ model: "embedding-001" })
-
-      const embeddings = await Promise.all(
-        qa.map(async (entry) => {
-          const allQuestions = [entry.question, ...(entry.variants || [])]
-          const normalizedVariants = allQuestions.map(normalizeText)
-
-          const results = await Promise.all(
-            normalizedVariants.map(async (variant) => {
-              const result = await model.embedContent(variant)
-              return result.embedding.values
-            }),
-          )
-
-          return { ...entry, embeddings: results }
-        }),
-      )
-
-      setQaEmbeddings(embeddings)
+    const saved = localStorage.getItem("qaEmbeddings");
+    if (saved) {
+      setQaEmbeddings(JSON.parse(saved));
+      return; // pas d'appel API
     }
 
-    generateEmbeddings()
-  }, [])
+    const generateEmbeddings = async () => {
+      const allVariants = qa.flatMap(entry =>
+        [entry.question, ...(entry.variants || [])].map(normalizeText)
+      );
+      const allEmbeddings = await getEmbeddingsBatch(allVariants);
+      // Redistribuer
+      let index = 0;
+      const embeddings = qa.map(entry => {
+        const variants = [entry.question, ...(entry.variants || [])].map(normalizeText);
+        const entryEmbeddings = variants.map(() => allEmbeddings[index++] || null);
+        return { ...entry, embeddings: entryEmbeddings };
+      });
+      localStorage.setItem("qaEmbeddings", JSON.stringify(embeddings));
+      setQaEmbeddings(embeddings);
+    };
+
+    generateEmbeddings();
+  }, []);
+
+
+
 
   const generateBotResponse = async (updatedChatHistory) => {
     const lastMessage = updatedChatHistory.at(-1)?.text
@@ -65,74 +68,64 @@ const Chatbot = ({ isOpen, setIsOpen }) => {
     const detectedLang = franc(normalized) // e.g., 'fra', 'eng', etc.
     console.log("Langue détectée :", detectedLang)
 
-    const model = genAI.getGenerativeModel({ model: "embedding-001" })
-    const result = await model.embedContent(lastMessage)
-    const userEmbedding = result.embedding.values
+    
 
     let bestMatch = null
     let highestSimilarity = 0
 
+    const userEmbedding = await getEmbedding(normalized);
+    if (!userEmbedding) {
+      setChatHistory((history) => [
+        ...history.slice(0, -1),
+        { role: "model", text: "Erreur lors du calcul de l'embedding utilisateur." },
+      ]);
+      return;
+    }
+
+
     for (const entry of qaEmbeddings) {
       for (const variantEmbedding of entry.embeddings) {
-        const sim = cosineSimilarity(userEmbedding, variantEmbedding)
+        if (!variantEmbedding) continue; // skip null
+        const sim = cosineSimilarity(userEmbedding, variantEmbedding);
         if (sim > highestSimilarity) {
-          highestSimilarity = sim
-          bestMatch = entry
+          highestSimilarity = sim;
+          bestMatch = entry;
         }
       }
     }
+
 
     if (highestSimilarity > 0.75 && bestMatch) {
       setChatHistory((history) => [...history.slice(0, -1), { role: "model", text: bestMatch.answer }])
       return
     }
 
-    const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
-    const API_KEY = import.meta.env.VITE_GEMINI_API_KEY
-
-    const isFrench = detectedLang === "fra"
-
-    const systemPrompt = isFrench
-      ? `Tu es Chaima, une étudiante en cybersécurité à l'ENSA Marrakech. Tu réponds toujours à la première personne. Tu ne dis jamais que tu es un modèle ou une IA.`
-      : `You are Chaima, a cybersecurity student at ENSA Marrakech. Always answer in the first person as Chaima. Never say you are an AI or model.`
-
-    const requestBody = {
-      contents: [
-        {
-          role: "user",
-          parts: [{ text: systemPrompt }],
-        },
-        ...updatedChatHistory
-          .filter((msg) => msg.text !== "Thinking ...")
-          .map((msg) => ({
-            role: msg.role,
-            parts: [{ text: msg.text }],
-          })),
-      ],
-    }
-
+    
     try {
-      const response = await fetch(`${API_URL}?key=${API_KEY}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(requestBody),
-      })
+      const isFrench = detectedLang === "fra"
 
-      const data = await response.json()
-      const botText = data?.candidates?.[0]?.content?.parts?.[0]?.text || "Je n'ai pas compris."
+      const systemPrompt = isFrench
+        ? `Tu es Chaima, une étudiante en cybersécurité à l'ENSA Marrakech. Tu réponds toujours à la première personne. Tu ne dis jamais que tu es un modèle ou une IA.`
+        : `You are Chaima, a cybersecurity student at ENSA Marrakech. Always answer in the first person as Chaima. Never say you are an AI or model.`
+
+      const messages = [
+        { role: "system", content: systemPrompt },
+        ...updatedChatHistory
+          .filter(msg => msg.text !== "Thinking ...")
+          .map(msg => ({ role: msg.role, content: msg.text }))
+      ]
+
+      const botText = await getChatResponse(messages)
 
       setChatHistory((history) => [...history.slice(0, -1), { role: "model", text: botText }])
     } catch (error) {
-      console.error("Erreur API Gemini:", error)
+      console.error("Erreur OpenAI:", error)
       setChatHistory((history) => [
         ...history.slice(0, -1),
-        {
-          role: "model",
-          text: "Erreur lors de la réponse du bot.",
-        },
-      ])
+        { role: "model", text: "Erreur lors de la réponse du bot." },
+      ])}
     }
-  }
+
 
   return (
     <>

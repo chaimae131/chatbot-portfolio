@@ -19,11 +19,10 @@
     }
   },
   "about": {
-    "title": "À propos de moi",
-    "summary": "J'ai construit une solide base grâce à des projets académiques et personnels...",
+    "title": "Éducation",
     "timeline": [
       {
-        "title": "Cycle d'ingénierie – Cybersécurité (2ème année)",
+        "title": "Cycle d'ingénierie – Cybersécurité (3ème année)",
         "date": "2023 - Présent",
         "place": "ENSA, Marrakech"
       },
@@ -44,7 +43,30 @@
         "cissp": "CISSP Professionnel certifié en sécurité des systèmes d'information",
         "iso": "ISO/IEC 27001:2022 ASSOCIÉ EN SÉCURITÉ DE L'INFORMATION™",
         "linux": "Administrer un système Linux",
-        "windows": "Prendre le contrôle de Windows Server"
+        "windows": "Prendre le contrôle de Windows Server",
+        "AWS": "AWS Certified Cloud Practitioner"
+    }
+  },
+  "experience": {
+    "title": "Expérience professionnelle",
+    "billeterie": {
+      "title": "Développement d'une application de billetterie",
+      "company": "ABSEC",
+      "period": "Juillet – Août 2025",
+      "type": "Stage PFA",
+      "description": "Développement d'une application de billetterie en ligne basée sur une architecture à microservices. Intégration du paiement en ligne (Stripe et PayPal), génération automatique de QR Code, service de découverte et passerelle Eureka.",
+      "demoLink": "Voir la démo",
+      "reportLink": "Voir le rapport",
+      "codeLink": "Voir le code" 
+    },
+    "socHybride": {
+      "title": "Mise en place d'un SOC Hybride",
+      "company": "IMS Technology",
+      "period": "Juillet – Août 2025",
+      "type": "Stage libre",
+      "description": "Conception d'une architecture SOC hybride intégrant le pare-feu pfsense, Suricata comme IDS/IPS, Wazuh pour la collecte de logs, et une stack SOC sur AWS avec Docker Compose intégrant TheHive, Cortex et MISP.",
+      "demoLink": "Voir la démo",
+      "reportLink": "Voir le rapport"
     }
   },
   "projects": {
@@ -57,7 +79,7 @@
       "cloud": "Cloud",
       "ai": "IA", 
       "web": "Web",
-      "virtualization": "Virtualisation"
+      "devsecops": "DevSecOps"
     },
     "noProjects": "Aucun projet dans cette catégorie.",
     "viewProject": "Voir le projet",
@@ -71,7 +93,7 @@
       "cloud": "Cloud",
       "ai": "AI",
       "web": "Web",
-      "virtualization": "Virtualization"
+      "devsecops": "DevSecOps"
     },
     "secureHomeLab": {
       "title": "Laboratoire sécurisé à domicile",
@@ -79,37 +101,37 @@
       "sections": {
         "0": "Configuration réseau avec pfSense pour créer des VLAN isolés et sécuriser le trafic.",
         "1": "Déploiement d'Active Directory et intégration des clients et serveurs.",
-        "2": "Pentest de l’Active Directory avec Kali Linux.",
+        "2": "Pentest de l'Active Directory avec Kali Linux.",
         "3": "Déploiement de Splunk pour surveiller les journaux et les activités AD.",
-        "4": "Utilisation de Tsurugi Linux pour la réponse aux incidents et l’analyse forensic (DFIR)."
+        "4": "Utilisation de Tsurugi Linux pour la réponse aux incidents et l'analyse forensic (DFIR)."
       }
     },
     "cloudSIEM": {
       "title": "SIEM Cloud-native (AWS)",
       "description": "Conception d'une pile SOC complète (TheHive, Cortex, Elasticsearch, MISP) avec Docker ; intégration de la threat intelligence et automatisation de l'enrichissement des incidents.",
       "sections": {
-        "0": "Activation de GuardDuty pour surveiller les instances EC2 contre les tentatives d’accès suspectes...",
+        "0": "Activation de GuardDuty pour surveiller les instances EC2 contre les tentatives d'accès suspectes...",
         "1": "Fonction Lambda restructurant les alertes GuardDuty et les envoyant vers S3 et TheHive.",
         "2": "Règle EventBridge déclenchant Lambda lors d'alertes GuardDuty.",
-        "3": "Configuration de SQS pour la communication asynchrone entre Lambda et l’instance principale.",
+        "3": "Configuration de SQS pour la communication asynchrone entre Lambda et l'instance principale.",
         "4": "Déploiement des conteneurs via Docker Compose (TheHive sur port 9000).",
-        "5": "Cortex accessible sur le port 9001 pour l’analyse automatisée.",
+        "5": "Cortex accessible sur le port 9001 pour l'analyse automatisée.",
         "6": "MISP pour stocker et partager des indicateurs de compromission.",
         "7": "Intégration complète Cortex + MISP avec TheHive pour enrichissement automatique.",
         "8": "Gestion des incidents dans TheHive comme cas structurés.",
         "9": "Analyseur VirusTotal dans Cortex pour enrichir les observables.",
-        "10": "Répondeur Cloudflare dans Cortex pour automatiser le blocage d’IP.",
+        "10": "Répondeur Cloudflare dans Cortex pour automatiser le blocage d'IP.",
         "11": "Corrélation d'observables dans MISP pour détecter des menaces connues.",
         "12": "Kibana pour visualiser les tableaux de bord des cas TheHive."
       }
     },
     "aiRecruitmentApp": {
       "title": "Application de recrutement intelligente",
-      "description": "Application web utilisant l’IA pour analyser les CV, noter les candidats et simuler des entretiens asynchrones.",
+      "description": "Application web utilisant l'IA pour analyser les CV, noter les candidats et simuler des entretiens asynchrones.",
       "sections": {
         "0": "Deux rôles utilisateurs : Candidat et Entreprise avec fonctionnalités dédiées.",
         "1": "Tableau de bord entreprise avec gestion des offres et des entretiens.",
-        "2": "Liste des offres publiées par l’entreprise.",
+        "2": "Liste des offres publiées par l'entreprise.",
         "3": "Tableau de bord candidat avec suivi des candidatures.",
         "4": "Candidature aux offres et suivi en temps réel.",
         "5": "Modèle cross-encoder comparant CV et offre pour calculer un score de correspondance.",
@@ -121,24 +143,24 @@
       }
     },
     "esxi-vcenter": {
-      "title": "Mise en place d’un environnement virtualisé",
+      "title": "Mise en place d'un environnement virtualisé",
       "description": "Construction d'une infrastructure virtualisée complète avec VMware ESXi et vCenter Server, incluant le déploiement et la configuration des services réseau essentiels.",
       "sections": {
         "0": "Installation et configuration initiale de vCenter Server pour centraliser et gérer les hôtes ESXi et les machines virtuelles efficacement.",
         "1": "Création et configuration de machines virtuelles avec les paramètres réseau appropriés pour assurer la communication entre VMs et réseaux externes.",
         "2": "Déploiement un serveur FTP dans une VM, permettant le partage de fichiers et le test du transfert sécurisé entre différentes VMs.",
         "3": "Mise en place du serveur web Apache2 sur une VM Linux, hébergeant du contenu web et activant des services web basiques dans l’environnement virtualisé.",
-        "4": "Configuration du service SSH sur les VMs Linux, sécurisant l’accès distant en désactivant l’authentification par mot de passe et en imposant l’authentification par clé."
+        "4": "Configuration du service SSH sur les VMs Linux, sécurisant l'accès distant en désactivant l'authentification par mot de passe et en imposant l’authentification par clé."
       }
     },
     "cbac-django": {
       "title": "Application CBAC",
       "description": "Développement d'une application web implémentant le contrôle d'accès basé sur le contenu, combiné à l’IA pour analyser les publications et appliquer des restrictions d’âge.",
       "sections": {
-        "0": "Page d’accueil présentant les principales fonctionnalités, dont le filtrage de contenu par IA et les options de publication sécurisées.",
+        "0": "Page d'accueil présentant les principales fonctionnalités, dont le filtrage de contenu par IA et les options de publication sécurisées.",
         "1": "Interface permettant aux utilisateurs de créer et partager des publications (texte, images, vidéos) avec analyse automatique avant publication.",
-        "2": "Page d’affichage du contenu pour les utilisateurs adultes, permettant un accès complet y compris au contenu sensible.",
-        "3": "Page d’affichage du contenu pour les mineurs, où seuls les contenus sûrs et publics sont visibles, le reste étant automatiquement restreint."
+        "2": "Page d'affichage du contenu pour les utilisateurs adultes, permettant un accès complet y compris au contenu sensible.",
+        "3": "Page d'affichage du contenu pour les mineurs, où seuls les contenus sûrs et publics sont visibles, le reste étant automatiquement restreint."
       }
     },
     "haac": {
@@ -146,33 +168,33 @@
       "description": "Durcissement statique et dynamique des systèmes Linux avec scripts et automatisation Ansible.",
       "sections": {
         "0": "Architecture du projet où le script principal orchestre les tâches de durcissement statique et dynamique.",
-        "1": "Script de durcissement statique interagissant avec l’utilisateur pour confirmer avant d’appliquer les changements.",
-        "2": "Durcissement dynamique pour s’adapter automatiquement selon l’état du système.",
+        "1": "Script de durcissement statique interagissant avec l'utilisateur pour confirmer avant d'appliquer les changements.",
+        "2": "Durcissement dynamique pour s'adapter automatiquement selon l'état du système.",
         "3": "Audit de la sécurité du système en testant et validant les mesures appliquées.",
-        "4": "Surveillance et vérification de l’état de sécurité actuel.",
+        "4": "Surveillance et vérification de l'état de sécurité actuel.",
         "5": "Automatisation de tous les processus de durcissement via des playbooks Ansible."
       }
     },
     "web-servers-security": {
       "title": "Sécurité des serveurs web",
-      "description": "Mise en place d’un réseau sécurisé dans GNS3 pour protéger un serveur web à l’aide de pare-feux, proxys et appliances de sécurité.",
+      "description": "Mise en place d'un réseau sécurisé dans GNS3 pour protéger un serveur web à l'aide de pare-feux, proxys et appliances de sécurité.",
       "sections": {
-        "0": "Configuration des politiques du pare-feu FortiGate et mise en place d’une DMZ pour isoler les serveurs web du réseau interne.",
-        "1": "Mise en place d’un reverse proxy pour gérer le trafic entrant et masquer l’adresse IP réelle du serveur backend.",
+        "0": "Configuration des politiques du pare-feu FortiGate et mise en place d'une DMZ pour isoler les serveurs web du réseau interne.",
+        "1": "Mise en place d'un reverse proxy pour gérer le trafic entrant et masquer l'adresse IP réelle du serveur backend.",
         "2": "Déploiement de FortiWeb pour la protection avancée des applications web et la détection de menaces.",
-        "3": "Tests pour vérifier l’efficacité de l’ensemble des mesures de sécurité mises en place."
+        "3": "Tests pour vérifier l'efficacité de l'ensemble des mesures de sécurité mises en place."
       }
     },
     "glucocare": {
       "title": "Application web GlucoCare",
-      "description": "Développement d’une application web sécurisée permettant aux patients et médecins de suivre les données liées au diabète, communiquer et gérer le traitement efficacement.",
+      "description": "Développement d'une application web sécurisée permettant aux patients et médecins de suivre les données liées au diabète, communiquer et gérer le traitement efficacement.",
       "sections": {
         "0": "Tableau de bord patient avec profil, notifications, notes et suivi des données de santé.",
         "1": "Interface pour créer et gérer des notes personnelles de santé.",
         "2": "Graphique affichant les niveaux de glycémie avant et après les repas.",
         "3": "Chatbot personnalisé pour aider les patients sur les questions liées au diabète.",
         "4": "Tableau de bord médecin pour gérer et suivre les informations des patients.",
-        "5": "Vue médecin affichant les profils des patients, l’historique des notes et les graphiques de glycémie.",
+        "5": "Vue médecin affichant les profils des patients, l'historique des notes et les graphiques de glycémie.",
         "6": "Possibilité pour le médecin de créer des rappels personnalisés pour les patients.",
         "7": "Système de messagerie pour planifier des consultations entre patients et médecins."
       }

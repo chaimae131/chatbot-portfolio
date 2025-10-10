@@ -3,7 +3,7 @@ const projectsData = [
     id: "secure-home-lab",
     titleKey: "projects.secureHomeLab.title",
     categoriesKeys: ["personalProjects", "network"],
-    images: ["/lab.jpg"],
+    images: ["/arch1.png"],
     descriptionKey: "projects.secureHomeLab.description",
     technologies: ["pfSense", "Active Directory", "Splunk"],
     link: "/projects/AI-recruitement-app",
@@ -33,7 +33,7 @@ const projectsData = [
   {
     id: "Cloud-SIEM",
     titleKey: "projects.cloudSIEM.title",
-    categoriesKeys: ["academicProjects", "cloud"],
+    categoriesKeys: ["academicProjects", "cloud", "devsecops"],
     images: ["/cloud.jpg"],
     descriptionKey: "projects.cloudSIEM.description",
     technologies: ["AWS", "Docker", "Elasticsearch", "Kibana"],
@@ -154,7 +154,7 @@ const projectsData = [
   {
     id: "esxi-vcenter",
     titleKey: "projects.esxi-vcenter.title",
-    categoriesKeys: ["academicProjects", "virtualization"],
+    categoriesKeys: ["academicProjects"],
     images: ["/esxi.png"],
     descriptionKey: "projects.esxi-vcenter.description",
     technologies: ["VMware ESXi", "vCenter"],

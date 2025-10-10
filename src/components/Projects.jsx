@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next"
 export default function Projects() {
   const { t } = useTranslation()
 
-  const filterKeys = ["all", "academicProjects", "personalProjects", "network", "cloud", "ai", "web", "virtualization"]
+  const filterKeys = ["all", "academicProjects", "personalProjects", "network", "cloud", "ai", "web", "devsecops"]
 
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [selectedProject, setSelectedProject] = useState(null)

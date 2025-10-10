@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import "./Skills.css"
+import { FaProjectDiagram } from "react-icons/fa";
+import { SiSpring } from "react-icons/si";
 import {
   FaCode,
   FaServer,
@@ -85,16 +87,17 @@ const Skills = () => {
         { name: "Docker", icon: <FaDocker />, level: 80 },
         { name: "Ansible", icon: <SiAnsible />, level: 55 },
         { name: "OpenStack", icon: <SiOpenstack />, level: 40 },
+        { name: "Spring Cloud Eureka", icon: <SiSpring />, level: 30 }
       ],
     },
     {
       category: t("skills.categories.security"),
       icon: <FaLock className="skill-category-icon" />,
       skills: [
-        { name: "Wireshark", icon: <SiWireshark />, level: 90 },
-        { name: "FortiGate", icon: <SiFortinet />, level: 80 },
+        { name: "Wireshark", icon: <SiWireshark />, level: 60 },
+        { name: "FortiGate", icon: <SiFortinet />, level: 75 },
         { name: "pfSense", icon: <SiPfsense />, level: 80 },
-        { name: "DMZ", icon: <FaNetworkWired />, level: 75 },
+        { name: "DMZ", icon: <FaNetworkWired />, level: 65 },
         { name: "WAF", icon: <FaLock />, level: 80 },
       ],
     },

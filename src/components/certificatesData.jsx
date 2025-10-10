@@ -23,6 +23,11 @@ const certificatesData = [
     titleKey: "about.certificates.windows",
     image: "/openclass_server.png",
     issuer: "OpenClassrooms"
+  },
+  {
+    titleKey: "about.certificates.AWS",
+    image: "./aws-practionner.png",
+    issuer: "Amazon Web Services (AWS)"
   }
 ];
 

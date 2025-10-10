@@ -19,11 +19,10 @@
     }
   },
   "about": {
-    "title": "About Me",
-    "summary": "I have built a strong foundation through academic and personal projects...",
+    "title": "Education",
     "timeline": [
       {
-        "title": "Engineering Cycle – Cybersecurity (2nd Year)",
+        "title": "Engineering Cycle – Cybersecurity (3rd Year)",
         "date": "2023 - Present",
         "place": "ENSA, Marrakech"
       },
@@ -44,7 +43,32 @@
         "cissp": "CISSP Certified Information Systems Security Professional",
         "iso": "ISO/IEC 27001:2022 INFORMATION SECURITY ASSOCIATE™",
         "linux": "Administer a Linux system",
-        "windows": "Take control of Windows Server"
+        "windows": "Take control of Windows Server",
+        "AWS": "AWS Certified Cloud Practitioner"
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "billeterie": {
+      "title": "Ticketing Application Development",
+      "company": "ABSEC",
+      "period": "July – August 2025",
+      "type": "PFA Internship",
+      "description": "Development of an online ticketing application based on a microservices architecture. Integration of online payment (Stripe and PayPal), automatic QR code generation, Eureka service discovery, and gateway.",
+      "skills": "Frontend and backend development, API integration, deployment.",
+      "demoLink": "View demo",
+      "reportLink": "View report",
+      "codeLink": "View code"
+    },
+    "socHybride": {
+      "title": "Hybrid SOC Implementation",
+      "company": "IMS Technology",
+      "period": "July – August 2025",
+      "type": "Open Internship",
+      "description": "Design of a hybrid SOC architecture integrating pfSense as firewall, Suricata as IDS/IPS, Wazuh for log collection, and a SOC stack on AWS with Docker Compose including TheHive, Cortex, and MISP.",
+      "skills": "Network architecture, security, cloud, and automation.",
+      "demoLink": "View demo",
+      "reportLink": "View report"
     }
   },
   "projects": {
@@ -57,7 +81,7 @@
       "cloud": "Cloud",
       "ai": "AI",
       "web": "Web",
-      "virtualization": "Virtualization"
+      "devsecops": "DevSecOps"
     },
     "noProjects": "No project in this category.",
     "viewProject": "View project",
@@ -71,7 +95,7 @@
       "cloud": "Cloud",
       "ai": "AI",
       "web": "Web",
-      "virtualization": "Virtualization"
+      "devsecops": "DevSecOps"
     },
     "secureHomeLab": {
       "title": "Secure Home Lab",

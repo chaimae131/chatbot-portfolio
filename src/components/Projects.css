@@ -68,7 +68,7 @@
 
 .project-image {
   width: 100%;
-  height: 180px;
+  height: 275px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -112,7 +112,7 @@
   color: white;
   border-radius: 5px;
   text-decoration: none;
-  width: 410px;
+  width: 482px;
   transition: background-color 0.3s ease;
   border: none;
 }

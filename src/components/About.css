@@ -2,19 +2,18 @@
   padding: 60px 20px;
   background-color: #f5f5f5;
 }
-h1{
-    text-align: center;
-    color: #000080;
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-
+h1 {
+  text-align: center;
+  color: #000080;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
 }
 
 h3 {
   color: #0087f5;
 }
 
-p{
+p {
   color: #555;
   font-size: 0.9rem;
 }
@@ -37,7 +36,7 @@ p{
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .timeline-header {
@@ -62,10 +61,9 @@ p{
   height: 25px;
 }
 
-
 .certifications {
   margin-top: 40px;
-  max-width: 900px;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -78,9 +76,9 @@ p{
 
 .cert-list {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-
+  flex-wrap: wrap; 
+  gap: 20px;              
+  justify-content: center;
 }
 
 .cert-row {
@@ -90,11 +88,15 @@ p{
   background: white;
   padding: 12px 16px;
   border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+
+  flex: 1 1 calc(50% - 20px); /* 2 cartes par ligne, prend 50% moins le gap */
+ 
+  box-sizing: border-box;      /* inclut padding et border dans la largeur */
 }
 
 .title {
-    color: #0087f5;
+  color: #0087f5;
 }
 
 .cert-info {
@@ -103,6 +105,7 @@ p{
 
 .cert-info h4 {
   margin: 0;
+  margin-bottom: 12px;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -132,7 +135,7 @@ p{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,5 +146,105 @@ p{
   max-width: 80%;
   max-height: 80%;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+
+/* Ajout des styles pour la section Expérience professionnelle */
+.experience-section {
+  margin-top: 70px;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-section h2 {
+  color: #000080;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: row; 
+  gap: 25px;
+}
+
+.experience-card {
+  position: relative;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #0087f5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  flex: 1 1 300px; /* prend minimum 300px, s’adapte pour remplir l’espace */
+  max-width: 750px; /* limite la largeur */
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.experience-title {
+  color: #0087f5;
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.experience-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: #666;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.experience-intro {
+  margin: 15px 0;
+  line-height: 1.7;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+
+.experience-tech {
+  margin: 15px 0;
+  color: #555;
+  font-size: 0.93rem;
+}
+
+.experience-tech strong {
+  color: #000080;
+  font-weight: 600;
+}
+
+.experience-footer {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.experience-links {
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 0.93rem;
+}
+
+.experience-links a {
+  color: #5673d3;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.experience-links a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
