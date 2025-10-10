@@ -16,10 +16,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_4i2hprq", // service_id EmailJS
-        "template_vx5h0vb", // template_id EmailJS
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,  // service_id
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // template_id
         formRef.current,
-        "ciweFGFeW9XrbdM19" // clé publique EmailJS
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY  // clé publique
       )
       .then(
         () => {
