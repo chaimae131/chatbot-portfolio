@@ -127,6 +127,25 @@
         "12": "Kibana visualizes dashboards of TheHive cases."
       }
     },
+    "pipeline": {
+      "title": "Docker CI/CD pipeline to AWS ECS",
+      "description": "Automated CI/CD pipeline that builds a Docker image and deploys it to AWS ECS on every GitHub push",
+      "sections": {
+          "0": "Create the project locally and write the Dockerfile for the application.",
+          "1": "Build the Docker image to test it locally.",
+          "2": "Test the Docker image on the local machine to ensure it works correctly.",
+          "3": "Push the source code to GitHub.",
+          "4": "Set up AWS ECR to store Docker images.",
+          "5": "Push the Docker image to the AWS ECR repository.",
+          "6": "Set up AWS ECS to deploy the application from the ECR image.",
+          "7": "Create the ECS Task Definition and Service to manage tasks.",
+          "8": "Configure GitHub Actions to automate building and pushing the Docker image to AWS ECR.",
+          "9": "Automatically trigger the CI/CD pipeline on every GitHub push.",
+          "10": "Test the deployed application on ECS to ensure it runs correctly.",
+          "11": "ECR overview: Docker images are created and stored in ECR on every push.",
+          "12": "ECS overview: the application is deployed and running on ECS."
+      }
+    },
     "aiRecruitmentApp": {
       "title": "Intelligent Recruitment App",
       "description": "Web app using AI to analyze CVs, score candidates, and simulate asynchronous job interviews.",

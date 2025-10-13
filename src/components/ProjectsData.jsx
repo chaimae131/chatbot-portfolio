@@ -3,10 +3,10 @@ const projectsData = [
     id: "secure-home-lab",
     titleKey: "projects.secureHomeLab.title",
     categoriesKeys: ["personalProjects", "network"],
-    images: ["/arch1.png"],
+    images: ["/home-lab-arch.png"],
     descriptionKey: "projects.secureHomeLab.description",
     technologies: ["pfSense", "Active Directory", "Splunk"],
-    link: "/projects/AI-recruitement-app",
+    link: "/projects/secure-home-lab",
     sections: [
       {
         image: "/lab1.jpg",
@@ -37,7 +37,7 @@ const projectsData = [
     images: ["/cloud.jpg"],
     descriptionKey: "projects.cloudSIEM.description",
     technologies: ["AWS", "Docker", "Elasticsearch", "Kibana"],
-    link: "/projects/AI-recruitement-app",
+    link: "/projects/Cloud-SIEM",
     demo: "https://vimeo.com/1109039878?share=copy",
     sections: [
       {
@@ -91,6 +91,70 @@ const projectsData = [
       {
         image: "/cloud7.jpg",
         textKey: "projects.cloudSIEM.sections.12",
+      },
+    ],
+  },
+  {
+    id: "pipeline",
+    titleKey: "projects.pipeline.title",
+    categoriesKeys: ["personalProjects", "cloud", "devsecops"],
+    images: ["/pipeline.png"],
+    descriptionKey: "projects.pipeline.description",
+    technologies: ["Docker", "AWS ECR", "AWS ECS", "GitHub Actions"],
+    link: "/projects/pipeline",
+    github: "https://github.com/chaimae131/pipeline-project",
+    sections: [
+      {
+        image: "/ci0.png",
+        textKey: "projects.pipeline.sections.0",
+      },
+      {
+        image: "/ci1.png",
+        textKey: "projects.pipeline.sections.1",
+      },
+      {
+        image: "/ci2.png",
+        textKey: "projects.pipeline.sections.2",
+      },
+      {
+        image: "/ci3.png",
+        textKey: "projects.pipeline.sections.3",
+      },
+      {
+        image: "/ci4.png",
+        textKey: "projects.pipeline.sections.4",
+      },
+      {
+        image: "/ci5.png",
+        textKey: "projects.pipeline.sections.5",
+      },
+      {
+        image: "/ci6.png",
+        textKey: "projects.pipeline.sections.6",
+      },
+      {
+        image: "/ci7.png",
+        textKey: "projects.pipeline.sections.7",
+      },
+      {
+        image: "/ci8.png",
+        textKey: "projects.pipeline.sections.8",
+      },
+      {
+        image: "/ci9.png",
+        textKey: "projects.pipeline.sections.9",
+      },
+      {
+        image: "/ci10.png",
+        textKey: "projects.pipeline.sections.10",
+      },
+      {
+        image: "/ci11.png",
+        textKey: "projects.pipeline.sections.11",
+      },
+      {
+        image: "/ci12.png",
+        textKey: "projects.pipeline.sections.12",
       },
     ],
   },

@@ -125,6 +125,25 @@
         "12": "Kibana pour visualiser les tableaux de bord des cas TheHive."
       }
     },
+    "pipeline": {
+      "title": "Pipeline CI/CD Docker vers AWS ECS",
+      "description": "Pipeline CI/CD automatisée qui construit une image Docker et la déploie sur AWS ECS à chaque push sur GitHub.",
+      "sections": {
+        "0": "Créer le projet localement et écrire le Dockerfile pour l'application.",
+        "1": "Construire l'image Docker pour tester localement.",
+        "2": "Tester l'image Docker sur la machine locale pour s'assurer qu'elle fonctionne.",
+        "3": "Pousser le code source sur GitHub.",
+        "4": "Configurer AWS ECR pour stocker les images Docker.",
+        "5": "Pousser l'image Docker vers le repository AWS ECR.",
+        "6": "Configurer AWS ECS pour déployer l'application à partir de l'image ECR.",
+        "7": "Créer la Task Definition et le Service ECS pour gérer les tâches.",
+        "8": "Configurer GitHub Actions pour automatiser la construction et le push de l'image Docker vers AWS ECR.",
+        "9": "Déclencher automatiquement le pipeline CI/CD à chaque push sur GitHub.",
+        "10": "Tester l'application déployée sur ECS pour vérifier qu'elle fonctionne correctement.",
+        "11": "Vue d'ensemble ECR : les images Docker sont créées et stockées dans ECR à chaque push.",
+        "12": "Vue d'ensemble ECS : l'application est déployée et exécutée sur ECS."
+      }
+    },
     "aiRecruitmentApp": {
       "title": "Application de recrutement intelligente",
       "description": "Application web utilisant l'IA pour analyser les CV, noter les candidats et simuler des entretiens asynchrones.",
