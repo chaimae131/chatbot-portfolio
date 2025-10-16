@@ -44,7 +44,9 @@
         "iso": "ISO/IEC 27001:2022 INFORMATION SECURITY ASSOCIATE™",
         "linux": "Administer a Linux system",
         "windows": "Take control of Windows Server",
-        "AWS": "AWS Certified Cloud Practitioner"
+        "AWS": "AWS Certified Cloud Practitioner",
+        "Elastic-SIEM": "Elastic Security for SIEM",
+        "Elastic-IA": "Elastic AI Assistant for Security Operations"
     }
   },
   "experience": {

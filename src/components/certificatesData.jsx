@@ -28,6 +28,16 @@ const certificatesData = [
     titleKey: "about.certificates.AWS",
     image: "./aws-practionner.png",
     issuer: "Amazon Web Services (AWS)"
+  },
+  {
+    titleKey: "about.certificates.Elastic-SIEM",
+    image: "./Elastic-siem.png",
+    issuer: "ELASTIC TRAINING PROGRAM"
+  },
+  {
+    titleKey: "about.certificates.Elastic-IA",
+    image: "./Elastic-ia.png",
+    issuer: "Elastic Training Program"
   }
 ];
 
