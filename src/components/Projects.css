@@ -48,7 +48,7 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
-  gap: 30px;
+  gap: 25px;
 }
 
 .project-card {
@@ -60,6 +60,7 @@
   flex-direction: column;
   justify-content: space-between;
   transition: box-shadow 0.3s ease;
+  margin: 0 auto;
 }
 
 .project-card:hover {
@@ -79,6 +80,7 @@
   margin-bottom: 12px;
   font-size: 1.3rem;
 }
+
 
 .project-card p {
   flex-grow: 1;
@@ -112,7 +114,7 @@
   color: white;
   border-radius: 5px;
   text-decoration: none;
-  width: 482px;
+  
   transition: background-color 0.3s ease;
   border: none;
 }
@@ -120,9 +122,6 @@
 .btn-project:hover {
   background-color: #53abff;
 }
-
-
-
 
 
 

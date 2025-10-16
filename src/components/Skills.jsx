@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import "./Skills.css"
-import { FaProjectDiagram } from "react-icons/fa";
 import { SiSpring } from "react-icons/si";
 import {
   FaCode,
@@ -83,7 +82,7 @@ const Skills = () => {
       category: t("skills.categories.cloud"),
       icon: <FaCloud className="skill-category-icon" />,
       skills: [
-        { name: "AWS (GuardDuty, EventBridge, Lambda, S3, ECS)", icon: <SiAmazonwebservices />, level: 70 },
+        { name: "AWS (GuardDuty, EventBridge, Lambda, S3, EC2, ECS)", icon: <SiAmazonwebservices />, level: 70 },
         { name: "Docker", icon: <FaDocker />, level: 80 },
         { name: "Ansible", icon: <SiAnsible />, level: 55 },
         { name: "OpenStack", icon: <SiOpenstack />, level: 40 },
