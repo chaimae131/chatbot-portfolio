@@ -146,6 +146,19 @@
         "12": "Vue d'ensemble ECS : l'application est déployée et exécutée sur ECS."
       }
     },
+    "openstack": {
+      "title": "Déploiement d'un Cloud Privé OpenStack avec DevStack",
+      "description": "Implémentation d'un cloud privé OpenStack avec DevStack : installation de l'environnement, configuration réseau via Horizon, création d'images et d'instances",
+      "sections": {
+        "0": "Préparation et installation - Installer les dépendances (comme git), créer l'utilisateur stack, cloner le dépôt DevStack puis lancer l'installation.",
+        "1": "Accès Horizon et configuration initiale - Se connecter à Horizon, créer un nouveau projet et un nouvel utilisateur, puis se connecter avec ce dernier pour créer le réseau privé.",
+        "2": "Configuration réseau - Créer un routeur, lui ajouter une interface vers le réseau privé, puis le connecter au réseau public afin d'obtenir la topologie réseau complète.",
+        "3": "Sécurité - Créer un Security Group permettant l'accès SSH (port 22) aux futures instances.",
+        "4": "Gestion des images et création d'instance - Importer une image Ubuntu Cloud (QEMU). Créer une instance à partir de cette image en ajoutant une clé SSH pour l'accès distant.",
+        "5": "Lancement de l'instance - Définir les paramètres (flavor, réseau, clé), lancer l'instance et lui associer une Floating IP.",
+        "6": "Accès à la machine virtuelle - Se connecter à l'instance via SSH en utilisant la clé ajoutée."
+      }
+    },
     "aiRecruitmentApp": {
       "title": "Application de recrutement intelligente",
       "description": "Application web utilisant l'IA pour analyser les CV, noter les candidats et simuler des entretiens asynchrones.",

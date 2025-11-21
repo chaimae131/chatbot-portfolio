@@ -159,6 +159,49 @@ const projectsData = [
     ],
   },
   {
+    id: "openstack",
+    titleKey: "projects.openstack.title",
+    categoriesKeys: ["personalProjects", "cloud"],
+    images: ["/o.png"],
+    descriptionKey: "projects.openstack.description",
+    technologies: ["OpenStack" , "DevStack", "Horizon", "SSH "],
+    link: "/projects/openstack",
+    sections: [
+      {
+        image: "/o1.png",
+        textKey: "projects.openstack.sections.0",
+      },
+      {
+        image: "/o2.png",
+        textKey: "projects.openstack.sections.1",
+      },
+      {
+        image: "/o3.png",
+        textKey: "projects.openstack.sections.2",
+      },
+      {
+        image: "/o4.png",
+        textKey: "projects.openstack.sections.3",
+      },
+      {
+        image: "/o5.png",
+        textKey: "projects.openstack.sections.4",
+      },
+      {
+        image: "/o6.png",
+        textKey: "projects.openstack.sections.5",
+      },
+      {
+        image: "/o7.png",
+        textKey: "projects.openstack.sections.6",
+      },
+      {
+        image: "/o8.png",
+        textKey: "projects.openstack.sections.7",
+      },
+    ],
+  },
+  {
     id: "AI-recruitement-app",
     titleKey: "projects.aiRecruitmentApp.title",
     categoriesKeys: ["academicProjects", "ai", "web"],
@@ -247,35 +290,6 @@ const projectsData = [
     ],
   },
   {
-    id: "cbac-django",
-    titleKey: "projects.cbac-django.title",
-    categoriesKeys: ["academicProjects", "web", "ai"],
-    images: ["/cbac1.png"],
-    descriptionKey: "projects.cbac-django.description",
-    technologies: ["Django", "Python", "AI", "Web Security"],
-    link: "/projects/cbac-django",
-    demo: "https://vimeo.com/1108991054?share=copy",
-    github: "https://github.com/KhadijaElghozail/CBAC_proj",
-    sections: [
-      {
-        image: "/cbac2.png",
-        textKey: "projects.cbac-django.sections.0",
-      },
-      {
-        image: "/cbac3.png",
-        textKey: "projects.cbac-django.sections.1",
-      },
-      {
-        image: "/cbac4.png",
-        textKey: "projects.cbac-django.sections.2",
-      },
-      {
-        image: "/cbac5.png",
-        textKey: "projects.cbac-django.sections.3",
-      },
-    ],
-  },
-  {
     id: "haac",
     titleKey: "projects.haac.title",
     categoriesKeys: ["academicProjects"],
@@ -337,6 +351,35 @@ const projectsData = [
       {
         image: "/web5.png",
         textKey: "projects.web-servers-security.sections.3",
+      },
+    ],
+  },
+  {
+    id: "cbac-django",
+    titleKey: "projects.cbac-django.title",
+    categoriesKeys: ["academicProjects", "web", "ai"],
+    images: ["/cbac1.png"],
+    descriptionKey: "projects.cbac-django.description",
+    technologies: ["Django", "Python", "AI", "Web Security"],
+    link: "/projects/cbac-django",
+    demo: "https://vimeo.com/1108991054?share=copy",
+    github: "https://github.com/KhadijaElghozail/CBAC_proj",
+    sections: [
+      {
+        image: "/cbac2.png",
+        textKey: "projects.cbac-django.sections.0",
+      },
+      {
+        image: "/cbac3.png",
+        textKey: "projects.cbac-django.sections.1",
+      },
+      {
+        image: "/cbac4.png",
+        textKey: "projects.cbac-django.sections.2",
+      },
+      {
+        image: "/cbac5.png",
+        textKey: "projects.cbac-django.sections.3",
       },
     ],
   },
