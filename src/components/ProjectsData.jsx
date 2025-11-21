@@ -162,7 +162,7 @@ const projectsData = [
     id: "openstack",
     titleKey: "projects.openstack.title",
     categoriesKeys: ["personalProjects", "cloud"],
-    images: ["/o.png"],
+    images: ["/openstack.png"],
     descriptionKey: "projects.openstack.description",
     technologies: ["OpenStack" , "DevStack", "Horizon", "SSH "],
     link: "/projects/openstack",
@@ -194,10 +194,6 @@ const projectsData = [
       {
         image: "/o7.png",
         textKey: "projects.openstack.sections.6",
-      },
-      {
-        image: "/o8.png",
-        textKey: "projects.openstack.sections.7",
       },
     ],
   },
