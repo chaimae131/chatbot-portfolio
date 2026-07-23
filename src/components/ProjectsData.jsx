@@ -1,33 +1,88 @@
 const projectsData = [
   {
-    id: "secure-home-lab",
-    titleKey: "projects.secureHomeLab.title",
-    categoriesKeys: ["personalProjects", "network"],
-    images: ["/home-lab-arch.png"],
-    descriptionKey: "projects.secureHomeLab.description",
-    technologies: ["pfSense", "Active Directory", "Splunk"],
-    link: "/projects/secure-home-lab",
+    id: "AtlasPlay",
+    titleKey: "projects.AtlasPlay.title",
+    categoriesKeys: ["academicProjects", "devsecops", "web"],
+    images: ["/AtlasPlay.png"],
+    descriptionKey: "projects.AtlasPlay.description",
+    technologies: ["Spring Boot", "Jenkins", "Argo CD", "SonarQube"],
+    link: "/projects/AtlasPlay",
+    github: "https://github.com/chaimae131/CAN-DevSecOps",
     sections: [
       {
-        image: "/lab1.jpg",
-        textKey: "projects.secureHomeLab.sections.0",
+        image: "/AtlasPlay0.png",
+        textKey: "projects.AtlasPlay.sections.0",
       },
       {
-        image: "/lab3.jpg",
-        textKey: "projects.secureHomeLab.sections.1",
+        image: "/AtlasPlay1.png",
+        textKey: "projects.AtlasPlay.sections.1",
       },
       {
-        image: "/lab5.png",
-        textKey: "projects.secureHomeLab.sections.2",
+        image: "/AtlasPlay2.png",
+        textKey: "projects.AtlasPlay.sections.2",
       },
       {
-        image: "/lab2.jpg",
-        textKey: "projects.secureHomeLab.sections.3",
+        image: "/AtlasPlay3.png",
+        textKey: "projects.AtlasPlay.sections.3",
       },
       {
-        image: "/lab4.png",
-        textKey: "projects.secureHomeLab.sections.4",
+        image: "/AtlasPlay4.png",
+        textKey: "projects.AtlasPlay.sections.4",
       },
+      {
+        image: "/AtlasPlay5.png",
+        textKey: "projects.AtlasPlay.sections.5",
+      },
+      {
+        image: "/AtlasPlay6.png",
+        textKey: "projects.AtlasPlay.sections.6",
+      },
+      {
+        image: "/AtlasPlay7.png",
+        textKey: "projects.AtlasPlay.sections.7",
+      },
+      
+    ],
+  },
+  {
+    id: "k8s",
+    titleKey: "projects.k8s.title",
+    categoriesKeys: ["academicProjects", "devsecops"],
+    images: ["/kub.png"],
+    descriptionKey: "projects.k8s.description",
+    technologies: ["Kubernetes", "Terraform", "Ansible", "Prometheus", "Loki", "Grafana"],
+    link: "/projects/k8s",
+    demo: "https://vimeo.com/1212349669?share=copy&fl=sv&fe=ci",
+    github: "https://github.com/chaimae131/k8s-automation-platform",
+    sections: [
+      {
+        image: "/kub0.png",
+        textKey: "projects.k8s.sections.0",
+      },
+      {
+        image: "/kub1.png",
+        textKey: "projects.k8s.sections.1",
+      },
+      {
+        image: "/kub2.png",
+        textKey: "projects.k8s.sections.2",
+      },
+      {
+        image: "/kub3.png",
+        textKey: "projects.k8s.sections.3",
+      },
+      {
+        image: "/kub4.png",
+        textKey: "projects.k8s.sections.4",
+      },
+      {
+        image: "/kub5.png",
+        textKey: "projects.k8s.sections.5",
+      },
+      {
+        image: "/kub6.png",
+        textKey: "projects.k8s.sections.6",
+      }
     ],
   },
   {
@@ -155,6 +210,37 @@ const projectsData = [
       {
         image: "/ci12.png",
         textKey: "projects.pipeline.sections.12",
+      },
+    ],
+  },
+  {
+    id: "secure-home-lab",
+    titleKey: "projects.secureHomeLab.title",
+    categoriesKeys: ["personalProjects", "network"],
+    images: ["/home-lab-arch.png"],
+    descriptionKey: "projects.secureHomeLab.description",
+    technologies: ["pfSense", "Active Directory", "Splunk"],
+    link: "/projects/secure-home-lab",
+    sections: [
+      {
+        image: "/lab1.jpg",
+        textKey: "projects.secureHomeLab.sections.0",
+      },
+      {
+        image: "/lab3.jpg",
+        textKey: "projects.secureHomeLab.sections.1",
+      },
+      {
+        image: "/lab5.png",
+        textKey: "projects.secureHomeLab.sections.2",
+      },
+      {
+        image: "/lab2.jpg",
+        textKey: "projects.secureHomeLab.sections.3",
+      },
+      {
+        image: "/lab4.png",
+        textKey: "projects.secureHomeLab.sections.4",
       },
     ],
   },
@@ -356,7 +442,7 @@ const projectsData = [
     categoriesKeys: ["academicProjects", "web", "ai"],
     images: ["/cbac1.png"],
     descriptionKey: "projects.cbac-django.description",
-    technologies: ["Django", "Python", "AI", "Web Security"],
+    technologies: ["Django", "Python", "AI"],
     link: "/projects/cbac-django",
     demo: "https://vimeo.com/1108991054?share=copy",
     github: "https://github.com/KhadijaElghozail/CBAC_proj",

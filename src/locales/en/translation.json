@@ -8,8 +8,8 @@
   },
   "home": {
     "name": "Chaima Bissi",
-    "title": "Cybersecurity Student",
-    "description": "Engineering Student in Cyber Defense & Embedded Telecommunications Systems",
+    "title": "Cybersecurity Engineer | Cloud • DevOps",
+    "description": "I build, secure, and automate. Exploring Cloud & DevSecOps to create secure solutions through automation and innovation.",
     "downloadCV": "Download CV",
     "chatbot": "Ask me a question",
     "stats": {
@@ -22,8 +22,8 @@
     "title": "Education",
     "timeline": [
       {
-        "title": "Engineering Cycle – Cybersecurity (3rd Year)",
-        "date": "2023 - Present",
+        "title": "Engineering Cycle – Cybersecurity",
+        "date": "2023 - 2026",
         "place": "ENSA, Marrakech"
       },
       {
@@ -51,12 +51,21 @@
   },
   "experience": {
     "title": "Professional Experience",
+    "erpSapAribaIntegration": {
+      "title": "ERP–SAP Ariba API Synchronization & Monitoring",
+      "company": "UM6P",
+      "period": "March 2026 – Present",
+      "type": "PFE",
+      "description": "Design and development of an ERP/procurement platform with FastAPI, integrating API synchronization via Webhooks, Keycloak authentication (RBAC), and application monitoring with the ELK Stack.",
+      "skills": "API integration, security (IAM/OAuth2), monitoring and observability.",
+      "codeLink": ""
+    },
     "billeterie": {
       "title": "Ticketing Application Development",
       "company": "ABSEC",
       "period": "July – August 2025",
       "type": "PFA Internship",
-      "description": "Development of an online ticketing application based on a microservices architecture. Integration of online payment (Stripe and PayPal), automatic QR code generation, Eureka service discovery, and gateway.",
+      "description": "Development of an online ticketing application based on a microservices architecture. Integration of online payment (Stripe and PayPal), automatic QR code generation.",
       "skills": "Frontend and backend development, API integration, deployment.",
       "demoLink": "View demo",
       "reportLink": "View report",
@@ -67,7 +76,7 @@
       "company": "IMS Technology",
       "period": "July – August 2025",
       "type": "Open Internship",
-      "description": "Design of a hybrid SOC architecture integrating pfSense as firewall, Suricata as IDS/IPS, Wazuh for log collection, and a SOC stack on AWS with Docker Compose including TheHive, Cortex, and MISP.",
+      "description": "Design of a hybrid SOC architecture integrating pfSense as firewall, Suricata as IDS, Wazuh for log collection, and a SOC stack on AWS with Docker Compose including TheHive, Cortex, and MISP.",
       "skills": "Network architecture, security, cloud, and automation.",
       "demoLink": "View demo",
       "reportLink": "View report"
@@ -83,7 +92,7 @@
       "cloud": "Cloud",
       "ai": "AI",
       "web": "Web",
-      "devsecops": "DevSecOps"
+      "devsecops": "DevOps"
     },
     "noProjects": "No project in this category.",
     "viewProject": "View project",
@@ -108,6 +117,36 @@
         "2": "Pentesting Active Directory with Kali Linux.",
         "3": "Deployment of Splunk to monitor logs and AD activities.",
         "4": "Using Tsurugi Linux for incident response and digital forensics (DFIR)."
+      }
+    },
+    "k8s": {
+      "title": "Kubernetes Infrastructure Automation and Security",
+      "description": "Designed and deployed an automated, secure, and fully monitored Kubernetes platform using Infrastructure as Code, GitOps, and a complete observability stack.",
+      "sections": {
+        "0": "Terraform project structure defining the infrastructure, variables, outputs, and dynamic Ansible inventory generation.",
+        "1": "Successful Terraform deployment provisioning the Kubernetes control plane and worker nodes, configuring SSH access, and generating the Ansible inventory automatically.",
+        "2": "Ansible connectivity verification showing successful communication with all Kubernetes nodes before cluster configuration.",
+        "3": "Automated Argo CD installation using the official Helm chart, enabling continuous GitOps synchronization.",
+        "4": "Argo CD dashboard displaying synchronized applications and the current deployment state of the Kubernetes cluster.",
+        "5": "Grafana dashboards visualizing centralized logs collected by Promtail and stored in Loki.",
+        "6": "Grafana dashboards displaying real-time infrastructure and Kubernetes metrics collected by Prometheus and Node Exporter."
+      }
+    },
+    "AtlasPlay": {
+      "title": "DevSecOps Platform for Sports Events",
+      "description": "Implemented a DevSecOps pipeline for a Spring Boot web application using Jenkins, automated security testing, Argo CD, and Kubernetes.",
+      "sections": {
+        "0": "Jenkins multibranch pipelines automating the CI workflow for multiple microservices, including build, testing, and deployment stages.",
+        "1": "SonarQube integration providing static code analysis (SAST) to detect code quality issues and security vulnerabilities.",
+        "2": "SpotBugs reports generated in Jenkins to identify potential bugs and security weaknesses in Java microservices.",
+        "3": "OWASP Dependency-Check scanning project dependencies to detect known vulnerabilities in third-party libraries.",
+        "4": "DAST security testing overview performing dynamic analysis of the running web application to identify security vulnerabilities.",
+        "5": "Argo CD dashboard displaying deployed microservices and their synchronization status in the Kubernetes environment.",
+        "6": "Grafana dashboards visualizing centralized application logs collected by Promtail and stored in Loki.",
+        "7": "Grafana monitoring dashboards displaying CPU usage and infrastructure metrics collected from the Kubernetes cluster.",
+        "8": "Application home page interface presenting the main features and user entry point of the sports events platform.",
+        "9": "Team management interface allowing users to create, manage, and organize sports teams.",
+        "10": "Experiences management interface for creating and managing sports-related experiences."
       }
     },
     "cloudSIEM": {

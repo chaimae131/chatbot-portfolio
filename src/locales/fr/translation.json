@@ -8,8 +8,8 @@
   },
   "home": {
     "name": "Chaima Bissi",
-    "title": "Étudiante en Cybersécurité",
-    "description": "Étudiante ingénieure en Cyberdéfense et Systèmes de Télécommunications Embarqués",
+    "title": "Ingénieure Cybersécurité | Cloud • DevOps",
+    "description": "Je conçois, je sécurise et j'automatise. J'explore le Cloud et le DevSecOps afin de créer des solutions sécurisées grâce à l'automatisation et à l'innovation.",
     "downloadCV": "Télécharger CV",
     "chatbot": "Poser vos questions",
     "stats": {
@@ -22,8 +22,8 @@
     "title": "Éducation",
     "timeline": [
       {
-        "title": "Cycle d'ingénierie – Cybersécurité (3ème année)",
-        "date": "2023 - Présent",
+        "title": "Cycle d'ingénierie – Cybersécurité",
+        "date": "2023 - 2026",
         "place": "ENSA, Marrakech"
       },
       {
@@ -51,12 +51,21 @@
   },
   "experience": {
     "title": "Expérience professionnelle",
+    "erpSapAribaIntegration": {
+      "title": "Synchronisation et supervision des API entre un ERP et une plateforme d'approvisionnement inspirée de SAP Ariba",
+      "company": "UM6P",
+      "period": "Mars 2026 – Présent",
+      "type": "Projet de Fin d'Études (PFE)",
+      "description": "Conception d'une plateforme ERP/procurement avec FastAPI, intégrant la synchronisation API via Webhooks, l'authentification Keycloak (RBAC) et monitoring avec ELK Stack.",
+      "skills": "Intégration d'API, sécurité (IAM/OAuth2), supervision et observabilité.",
+      "codeLink": "" 
+    },
     "billeterie": {
       "title": "Développement d'une application de billetterie",
       "company": "ABSEC",
       "period": "Juillet – Août 2025",
       "type": "Stage PFA",
-      "description": "Développement d'une application de billetterie en ligne basée sur une architecture à microservices. Intégration du paiement en ligne (Stripe et PayPal), génération automatique de QR Code, service de découverte et passerelle Eureka.",
+      "description": "Développement d'une application de billetterie en ligne basée sur une architecture à microservices. Intégration du paiement en ligne (Stripe et PayPal), génération automatique de QR Code.",
       "demoLink": "Voir la démo",
       "reportLink": "Voir le rapport",
       "codeLink": "Voir le code" 
@@ -66,7 +75,7 @@
       "company": "IMS Technology",
       "period": "Juillet – Août 2025",
       "type": "Stage libre",
-      "description": "Conception d'une architecture SOC hybride intégrant le pare-feu pfsense, Suricata comme IDS/IPS, Wazuh pour la collecte de logs, et une stack SOC sur AWS avec Docker Compose intégrant TheHive, Cortex et MISP.",
+      "description": "Conception d'une architecture SOC hybride intégrant le pare-feu pfsense, Suricata comme IDS, Wazuh pour la collecte de logs, et une stack SOC sur AWS avec Docker Compose intégrant TheHive, Cortex et MISP.",
       "demoLink": "Voir la démo",
       "reportLink": "Voir le rapport"
     }
@@ -81,7 +90,7 @@
       "cloud": "Cloud",
       "ai": "IA", 
       "web": "Web",
-      "devsecops": "DevSecOps"
+      "devsecops": "DevOps"
     },
     "noProjects": "Aucun projet dans cette catégorie.",
     "viewProject": "Voir le projet",
@@ -106,6 +115,36 @@
         "2": "Pentest de l'Active Directory avec Kali Linux.",
         "3": "Déploiement de Splunk pour surveiller les journaux et les activités AD.",
         "4": "Utilisation de Tsurugi Linux pour la réponse aux incidents et l'analyse forensic (DFIR)."
+      }
+    },
+    "AtlasPlay": {
+      "title": "Plateforme DevSecOps pour événements sportifs",
+      "description": "Développement d’une plateforme DevSecOps pour une application web Spring Boot avec Jenkins, tests de sécurité automatisés, Argo CD et Kubernetes pour automatiser le cycle de livraison sécurisé.",
+      "sections": {
+        "0": "Pipelines Jenkins multibranches automatisant le workflow CI des différents microservices, incluant les étapes de compilation, de tests et de déploiement.",
+        "1": "Intégration de SonarQube pour l'analyse statique du code (SAST) afin de détecter les problèmes de qualité et les vulnérabilités de sécurité.",
+        "2": "Rapports SpotBugs générés dans Jenkins pour identifier les erreurs potentielles et les faiblesses de sécurité dans les microservices Java.",
+        "3": "Analyse des dépendances avec OWASP Dependency-Check pour détecter les vulnérabilités connues dans les bibliothèques tierces utilisées par l'application.",
+        "4": "Vue d'ensemble des tests de sécurité DAST permettant d'effectuer une analyse dynamique de l'application en fonctionnement afin d'identifier les vulnérabilités.",
+        "5": "Tableau de bord Argo CD affichant les microservices déployés ainsi que leur état de synchronisation dans l'environnement Kubernetes.",
+        "6": "Tableaux de bord Grafana visualisant les logs centralisés collectés par Promtail et stockés dans Loki.",
+        "7": "Tableaux de bord Grafana affichant l'utilisation du CPU et les métriques de l'infrastructure collectées depuis le cluster Kubernetes.",
+        "8": "Interface de la page d'accueil de l'application présentant les fonctionnalités principales et le point d'entrée de la plateforme d'événements sportifs.",
+        "9": "Interface de gestion des équipes permettant aux utilisateurs de créer, gérer et organiser les équipes sportives.",
+        "10": "Interface de gestion des expériences permettant de créer et administrer les expériences liées aux événements sportifs."
+      }
+    },
+    "k8s": {
+      "title": "Automatisation et sécurisation d'une infrastructure Kubernetes",
+      "description": "Mise en place d'une plateforme Kubernetes automatisée, sécurisée et supervisée grâce à l'Infrastructure as Code, GitOps et une stack complète d'observabilité.",
+      "sections": {
+        "0": "Structure du projet Terraform définissant l'infrastructure, les variables, les sorties et la génération dynamique de l'inventaire Ansible.",
+        "1": "Déploiement Terraform réussi provisionnant le nœud de contrôle Kubernetes et les nœuds workers, configurant l'accès SSH et générant automatiquement l'inventaire Ansible.",
+        "2": "Vérification de la connectivité avec Ansible montrant une communication réussie avec tous les nœuds Kubernetes avant la configuration du cluster.",
+        "3": "Installation automatisée d'Argo CD à l'aide du chart Helm officiel, permettant la synchronisation continue via GitOps.",
+        "4": "Tableau de bord Argo CD affichant les applications synchronisées et l'état actuel des déploiements du cluster Kubernetes.",
+        "5": "Tableaux de bord Grafana visualisant les logs centralisés collectés par Promtail et stockés dans Loki.",
+        "6": "Tableaux de bord Grafana affichant les métriques en temps réel de l'infrastructure et du cluster Kubernetes collectées par Prometheus et Node Exporter."
       }
     },
     "cloudSIEM": {
